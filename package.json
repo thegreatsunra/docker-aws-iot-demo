@@ -1,13 +1,23 @@
 {
   "name": "docker-web-app",
-  "version": "0.1.0",
   "description": "Node.js on Docker",
+  "version": "0.1.0",
+  "homepage": "https://github.com/thegreatsunra/docker-web-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thegreatsunra/docker-web-app.git"
+  },
   "author": "Dane Petersen <thegreatsunra@gmail.com>",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
+  "license": "MIT",
+  "engines": {
+    "node": "^7.10.0",
+    "npm": "^4.6.0"
   },
   "dependencies": {
     "express": "^4.15.3"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js"
 }
