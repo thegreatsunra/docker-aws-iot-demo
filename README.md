@@ -1,10 +1,10 @@
-# docker-web-app
+# docker-aws-iot-demo
 
-> Node.js on Docker
+> Lightweight demo of AWS IoT messaging from a Docker container
 
 ## Getting started
 
-Everything here is based on [this guide](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/).
+Most of this is based on [this guide](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/).
 
 ### Prerequisites
 

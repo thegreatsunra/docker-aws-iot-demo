@@ -1,11 +1,11 @@
 {
-  "name": "docker-web-app",
-  "description": "Node.js on Docker",
+  "name": "docker-aws-iot-demo",
+  "description": "Lightweight demo of AWS IoT messaging from a Docker container",
   "version": "0.2.0",
-  "homepage": "https://github.com/thegreatsunra/docker-web-app",
+  "homepage": "https://github.com/thegreatsunra/docker-aws-iot-demo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thegreatsunra/docker-web-app.git"
+    "url": "https://github.com/thegreatsunra/docker-aws-iot-demo.git"
   },
   "author": "Dane Petersen <thegreatsunra@gmail.com>",
   "license": "MIT",
