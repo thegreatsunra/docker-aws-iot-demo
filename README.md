@@ -17,8 +17,12 @@ Everything here is based on [this guide](https://nodejs.org/en/docs/guides/nodej
 1. Start Docker on your computer
 1. Clone this repo `git clone https://github.com/thegreatsunra/docker-web-app.git`
 1. Build the Docker container `cd docker-web-app && docker build -t <your username>/node-web-app .`
-1. Run the container `docker run -p 49160:8080 <your username>/node-web-app`
-1. Open [http://localhost:8080](http://localhost:8080) in your web browser to view your Node app
+1. Run the container in detached mode `docker run -p 49160:8080 -d <your username>/node-web-app`
+1. Open [http://localhost:49160](http://localhost:49160) in your web browser to view your Node app
+
+### Shutting down
+1. Run `docker ps` and note the `CONTAINER ID` for your running Docker container
+1. Run `docker stop <container id>` to stop the container
 
 ## License
 
