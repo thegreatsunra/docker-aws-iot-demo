@@ -64,7 +64,7 @@ docker build --no-cache -t <your_username>/docker-aws-iot-demo .
 docker run -d <your_username>/docker-aws-iot-demo
 ```
 
-3) Run `docker ps` and note the `CONTAINER ID` for your running Docker container
+3) When you run the above command, Docker will output a long hexidecimal string. This is your `<container_id>`
 4) Run `docker logs <container_id>` to see if your Docker container successfully started up
 5) Run `docker stop <container_id>` to stop the container
 
