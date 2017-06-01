@@ -1,11 +1,11 @@
 {
-  "name": "docker-web-app",
-  "description": "Node.js on Docker",
-  "version": "0.2.0",
-  "homepage": "https://github.com/thegreatsunra/docker-web-app",
+  "name": "docker-aws-iot-demo",
+  "description": "Lightweight demo of AWS IoT messaging from a Docker container",
+  "version": "0.3.0",
+  "homepage": "https://github.com/thegreatsunra/docker-aws-iot-demo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thegreatsunra/docker-web-app.git"
+    "url": "https://github.com/thegreatsunra/docker-aws-iot-demo.git"
   },
   "author": "Dane Petersen <thegreatsunra@gmail.com>",
   "license": "MIT",
@@ -14,8 +14,8 @@
     "npm": "^4.2.0"
   },
   "dependencies": {
-    "express": "^4.15.3"
-  },
+    "aws-iot-device-sdk": "^1.0.14"
+    },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "lint": "eslint --ext .js ./",
-    "start": "node server.js"
+    "start": "node server.js --host-name=xxxxxxxxxxxxxx.iot.xx-xxxx-x.amazonaws.com --private-key=xxxxxxxx.private.key --client-certificate=xxxxxxxx.cert.pem --ca-certificate=xxxx-xx.crt"
   },
   "main": "server.js"
 }
