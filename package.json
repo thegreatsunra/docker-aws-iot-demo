@@ -14,6 +14,7 @@
     "npm": "^4.2.0"
   },
   "dependencies": {
+    "aws-iot-device-sdk": "^1.0.14",
     "express": "^4.15.3"
   },
   "devDependencies": {
@@ -27,7 +28,7 @@
   },
   "scripts": {
     "lint": "eslint --ext .js ./",
-    "start": "node server.js"
+    "start": "node server.js --host-name=xxxxxxxxxxxxxx.iot.xx-xxxx-x.amazonaws.com --private-key=xxxxxxxx.private.key --client-certificate=xxxxxxxx.cert.pem --ca-certificate=xxxx-xx.crt"
   },
   "main": "server.js"
 }
