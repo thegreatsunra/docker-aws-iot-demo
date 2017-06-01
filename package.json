@@ -14,9 +14,8 @@
     "npm": "^4.2.0"
   },
   "dependencies": {
-    "aws-iot-device-sdk": "^1.0.14",
-    "express": "^4.15.3"
-  },
+    "aws-iot-device-sdk": "^1.0.14"
+    },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
