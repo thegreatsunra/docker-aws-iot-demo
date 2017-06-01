@@ -1,0 +1,13 @@
+{
+  "name": "docker-web-app",
+  "version": "0.1.0",
+  "description": "Node.js on Docker",
+  "author": "Dane Petersen <thegreatsunra@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
