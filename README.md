@@ -4,14 +4,14 @@
 
 ## Getting started
 
-Most of this is based on [this guide](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/).
+Most of this is based on [this guide](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
 
 ### Prerequisites
 
 1) Install [node](https://nodejs.org/en/)
 2) Install [git](https://git-scm.com/downloads)
 3) Install [yarn](https://yarnpkg.com/lang/en/docs/install/)
-4) [Install Docker](https://store.docker.com/search?type=edition&offering=community)
+4) Install [Docker](https://store.docker.com/search?type=edition&offering=community)
 
 ### Set up project
 
@@ -64,9 +64,9 @@ docker build --no-cache -t <your_username>/docker-aws-iot-demo .
 docker run -d <your_username>/docker-aws-iot-demo
 ```
 
-2) Run `docker ps` and note the `CONTAINER ID` for your running Docker container
-3) Run `docker logs <container_id>` to see if your Docker container successfully started up
-4) Run `docker stop <container_id>` to stop the container
+3) Run `docker ps` and note the `CONTAINER ID` for your running Docker container
+4) Run `docker logs <container_id>` to see if your Docker container successfully started up
+5) Run `docker stop <container_id>` to stop the container
 
 ## License
 
