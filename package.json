@@ -1,7 +1,7 @@
 {
   "name": "docker-web-app",
   "description": "Node.js on Docker",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/thegreatsunra/docker-web-app",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "engines": {
     "node": "^7.10.0",
-    "npm": "^4.6.0"
+    "npm": "^4.2.0"
   },
   "dependencies": {
     "express": "^4.15.3"
