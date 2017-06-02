@@ -16,7 +16,6 @@ Most of this is based on [this guide](https://nodejs.org/en/docs/guides/nodejs-d
 ### Set up project
 
 1) Start Docker on your computer
-
 2) Clone this repo
 ```bash
 git clone https://github.com/thegreatsunra/docker-aws-iot-demo.git
@@ -44,29 +43,30 @@ cd docker-aws-iot-demo
 
 ### Associate certificates with your project
 
-1) Move all the files you downloaded (the certificate, public key, private key, and root CA) from AWS IoT into the root folder of this project
-
+1) Move all the files you downloaded (the certificate, public key, private key, and root CA) from AWS IoT into the `certs/` folder of this project, and rename the files to `certificate.pem.crt`, `public.pem.key`, `private.pem.key`, and `root-CA.crt`
 2) Open `package.json` and find the `start` script (should be around line 30)
 
-3) Update the values for `--private-key`, `--client-certificate`, and `--ca-certificate` to the names of the files you downloaded from AWS IoT and moved into this project
-
-4) Update the value for `--host-name` to your "custom endpoint" on AWS IoT. You can find this value by clicking the "Settings" menu option on your AWS IoT home screen. It should look something like `a1b2c3d4e5f6g7.iot.us-east-1.amazonaws.com`
-
-## Build and run the container with AWS IoT
+## Build and run the container
 
 1) Build the Docker container
 ```bash
 docker build --no-cache -t <your_username>/docker-aws-iot-demo .
 ```
-
 2) Run the container in detached mode
 ```bash
 docker run -d <your_username>/docker-aws-iot-demo
 ```
-
 3) When you run the above command, Docker will output a long hexidecimal string. This is your `<container_id>`
-4) Run `docker logs <container_id>` to see if your Docker container successfully started up
-5) Run `docker stop <container_id>` to stop the container
+4) Run `docker logs <container_id>` to make sure your Docker container successfully started up
+
+## Confirm messages are streaming to AWS IoT
+
+1) With your Docker container running, go to your AWS IoT home screen and click the "Test" menu option
+2) Under "Subscribe to a topic" enter `awsIotDemo` as your "Subscription topic"
+3) Click "Subscribe to topic"
+4) Click the "awsIotDemo" menu item that appears beneath "Subscribe to a topic" in the left menu
+5) You should see messages streaming in!
+6) Run `docker stop <container_id>` to stop the container
 
 ## License
 
