@@ -46,59 +46,49 @@ function processTest (args) {
 
   let timeout // eslint-disable-line no-unused-vars
   let count = 0
-  const minimumDelay = 250
+  const minimumDelay = 1000
 
-  if (args.testMode === 1) {
-    device.subscribe('topic_1')
-  } else {
-    device.subscribe('topic_2')
-  }
   if ((Math.max(args.delay, minimumDelay)) !== args.delay) {
     console.log('substituting ' + minimumDelay + 'ms delay for ' + args.delay + 'ms...')
   }
   timeout = setInterval(() => {
     count++
-
-    if (args.testMode === 1) {
-      device.publish('topic_2', JSON.stringify({
-        mode1Process: count
-      }))
-    } else {
-      device.publish('topic_1', JSON.stringify({
-        mode2Process: count
-      }))
+    let now = new Date()
+    let timestamp = now.toISOString()
+    let message = {
+      timestampUTC: timestamp,
+      messageCount: count,
+      payload: {
+        keyOne: true,
+        keyTwo: 'value'
     }
+    }
+    device.publish('awsIotDemo', JSON.stringify(message))
+    console.log('AWS IoT - device published: \n', JSON.stringify(message), '\n')
   }, Math.max(args.delay, minimumDelay)) // clip to minimum
-
-  //
-  // Do a simple publish/subscribe demo based on the test-mode passed
-  // in the command line arguments.  If test-mode is 1, subscribe to
-  // 'topic_1' and publish to 'topic_2' otherwise vice versa.  Publish
-  // a message every four seconds.
-  //
   device
     .on('connect', () => {
-      console.log('connect')
+      console.log('AWS IoT - device connected')
     })
   device
     .on('close', () => {
-      console.log('close')
+      console.log('AWS IoT - connection closed')
     })
   device
     .on('reconnect', () => {
-      console.log('reconnect')
+      console.log('AWS IoT - device reconnected')
     })
   device
     .on('offline', () => {
-      console.log('offline')
+      console.log('AWS IoT - device offline')
     })
   device
     .on('error', (error) => {
-      console.log('error', error)
+      console.log('AWS IoT - error', error)
     })
   device
     .on('message', (topic, payload) => {
-      console.log('message', topic, payload.toString())
+      console.log('AWS IoT - device message', topic, payload.toString())
     })
 }
 

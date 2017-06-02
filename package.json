@@ -21,13 +21,13 @@
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.3.0",
-    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1"
   },
   "scripts": {
     "lint": "eslint --ext .js ./",
-    "start": "node server.js --host-name=xxxxxxxxxxxxxx.iot.xx-xxxx-x.amazonaws.com --private-key=xxxxxxxx.private.key --client-certificate=xxxxxxxx.cert.pem --ca-certificate=xxxx-xx.crt"
+    "start": "node ./index.js -d --host-name=xxxxxxxxxxxxxx.iot.xx-xxxx-x.amazonaws.com --certificate-dir=./cert --private-key=private.pem.key --client-certificate=certificate.pem.crt --ca-certificate=root-CA.crt"
   },
-  "main": "server.js"
+  "main": "index.js"
 }
