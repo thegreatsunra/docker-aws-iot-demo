@@ -46,7 +46,7 @@ function processTest (args) {
 
   let timeout // eslint-disable-line no-unused-vars
   let count = 0
-  const minimumDelay = 5000
+  const minimumDelay = 1000
 
   if ((Math.max(args.delay, minimumDelay)) !== args.delay) {
     console.log('substituting ' + minimumDelay + 'ms delay for ' + args.delay + 'ms...')
