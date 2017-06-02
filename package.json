@@ -1,7 +1,7 @@
 {
   "name": "docker-aws-iot-demo",
   "description": "Lightweight demo of AWS IoT messaging from a Docker container",
-  "version": "0.4.0",
+  "version": "0.3.0",
   "homepage": "https://github.com/thegreatsunra/docker-aws-iot-demo",
   "repository": {
     "type": "git",
