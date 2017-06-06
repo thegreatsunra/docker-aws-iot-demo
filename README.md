@@ -45,6 +45,7 @@ cd docker-aws-iot-demo
 
 1) Move all the files you downloaded (the certificate, public key, private key, and root CA) from AWS IoT into the `certs/` folder of this project, and rename the files to `certificate.pem.crt`, `public.pem.key`, `private.pem.key`, and `root-CA.crt`
 2) Open `package.json` and find the `start` script (should be around line 30)
+3) Update the value for `--host-name` to your "custom endpoint" on AWS IoT. You can find this value by clicking the "Settings" menu option on your AWS IoT home screen. It should look something like `xxxxxxxxxxxxxx.iot.xx-xxxx-x.amazonaws.com`
 
 ## Build and run the container
 
